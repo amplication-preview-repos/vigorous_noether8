@@ -17,3 +17,18 @@ model User {
   updatedAt DateTime @updatedAt
   username  String   @unique
 }
+
+model Property {
+  baths        Decimal?
+  bedrooms     Int?
+  beds         Int?
+  createdAt    DateTime @default(now())
+  guestLimit   Int?
+  id           String   @id @default(cuid())
+  location     String?
+  name         String
+  nightlyPrice Float?
+  rentPrice    Float?
+  sellPrice    Float?
+  updatedAt    DateTime @updatedAt
+}
